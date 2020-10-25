@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { device } from "../functions/device";
 
 const translation = "translate(0,100px)";
 const fadeIn = keyframes`
@@ -22,10 +23,17 @@ export default styled.h1`
   text-align: left;
   margin: 0;
   line-height: 1.15;
-  font-size: 50px;
+
   font-weight: 600;
   animation-name: ${fadeIn};
   animation-duration: 2s;
   //animation-timing-function: cubic-bezier(0.4, -0.55, 0.1, 1);
   width: 100%;
+  font-size: 50px;
+  @media ${device.laptop} {
+    font-size: 40px;
+  }
+  @media ${device.tablet} {
+    font-size: 30px;
+  }
 `;
