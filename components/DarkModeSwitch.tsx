@@ -5,7 +5,6 @@ import { device } from "../functions/device";
 import styled, { keyframes } from "styled-components";
 
 export default function DarkSwitch() {
-  console.log(useDarkMode());
   const {
     autoModeActive,
     darkModeActive,

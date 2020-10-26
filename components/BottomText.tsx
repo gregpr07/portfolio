@@ -25,8 +25,4 @@ export default styled.p`
   @media ${device.tablet} {
     font-size: 18px;
   }
-
-  a:hover {
-    color: ${(props) => props.theme.colors.buttonColor};
-  }
 `;

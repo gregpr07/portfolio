@@ -7,23 +7,27 @@ import Title from "../components/Title";
 import SubTitle from "../components/SubTitle";
 import BottomText from "../components/BottomText";
 import Maxer from "../components/Maxer";
+import Creations from "../components/Creations";
 
 import DarkModeSwitch from "../components/DarkModeSwitch";
 
 export default function Index() {
   return (
-    <Header>
-      <DarkModeSwitch />
-      <Maxer>
-        <Title>Hi, I am Gregor Žunič &#129304;</Title>
-        <SubTitle>
-          Fullstack developer, Machine Learning reseacher and Physics student
-        </SubTitle>
-      </Maxer>
-      <BottomText>
-        Read <Link href="/about">about me</Link> or{" "}
-        <Link href="/contact">contact me</Link>
-      </BottomText>
-    </Header>
+    <>
+      <Header>
+        <DarkModeSwitch />
+        <Maxer>
+          <Title>Hi, I am Gregor Žunič &#129304;</Title>
+          <SubTitle>
+            Fullstack developer, Machine Learning reseacher and Physics student
+          </SubTitle>
+        </Maxer>
+        <BottomText>
+          Read <Link href="/about">about me</Link> or{" "}
+          <Link href="/contact">contact me</Link>
+        </BottomText>
+      </Header>
+      <Creations />
+    </>
   );
 }

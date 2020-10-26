@@ -12,6 +12,7 @@ export default function Creations() {
     },
   ];
 
+  return null;
   return (
     <Maxer>
       <div style={{ height: "500px", paddingTop: "2rem" }}>

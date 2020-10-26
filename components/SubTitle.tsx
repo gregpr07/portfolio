@@ -9,7 +9,7 @@ const fadeIn = keyframes`
 
 export default styled.p`
   margin: 0;
-  line-height: 1.15;
+  line-height: 40px;
 
   font-weight: 300;
   animation: ${fadeIn} 1s;
