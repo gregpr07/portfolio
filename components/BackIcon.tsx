@@ -19,9 +19,13 @@ const Icon = () => (
 );
 
 const fadeIn = keyframes`
-    0% { opacity:0; }
+    0% { opacity:0;
+        transform: rotate(720deg)
+        }
     50% { opacity:0; }
-    100% { opacity:1; }
+    100% { opacity:1;
+          transform: rotate(0deg) 
+        }
 `;
 
 const P = styled.p`
@@ -46,22 +50,22 @@ const P = styled.p`
     fill: ${(props) => props.theme.colors.textColor};
   }
 
-  svg :hover {
-    opacity: 0.7;
-  }
-
-  &:hover & {
-    opacity: 0.5;
-    cursor: pointer;
+  &:hover {
+    svg {
+      //opacity: 0.7;
+      fill: ${(props) => props.theme.colors.buttonColor};
+    }
   }
 `;
 
 export default function BackIcon() {
   return (
     <Link href="/">
-      <P>
-        <Icon />
-      </P>
+      <a>
+        <P>
+          <Icon />
+        </P>
+      </a>
     </Link>
   );
 }

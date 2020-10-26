@@ -1,9 +1,12 @@
 import "../styles/globals.css";
+import "../styles/darkModeSwitch.css";
 import withDarkMode from "next-dark-mode";
 import { ThemeProvider } from "styled-components";
 
 import lightTheme from "../themes/light";
 import darkTheme from "../themes/dark";
+
+import Container from "../components/Container";
 
 import Head from "next/head";
 
@@ -17,7 +20,10 @@ function MyApp({ Component, pageProps }) {
         <title>Gregor Žunič</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Component {...pageProps} />
+
+      <Container>
+        <Component {...pageProps} />
+      </Container>
     </ThemeProvider>
   );
 }

@@ -9,14 +9,11 @@ import BackIcon from "../components/BackIcon";
 
 export default function About() {
   return (
-    <Container>
-      <Header>
-        <BackIcon />
-        <Maxer>
-          <DarkModeSwitch />
-          <Title>About me</Title>
-        </Maxer>
-      </Header>
-    </Container>
+    <Header>
+      <BackIcon />
+      <Maxer>
+        <Title>About me</Title>
+      </Maxer>
+    </Header>
   );
 }

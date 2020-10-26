@@ -8,8 +8,9 @@ export default styled.div`
   justify-content: center;
   align-items: center;
 
+  padding-bottom: 10vh;
   @media ${device.tablet} {
-    padding-bottom: 25vh;
+    padding-bottom: 20vh;
   }
 
   flex: 1;

@@ -1,0 +1,99 @@
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.darkswitch {
+  align-items: center;
+
+  transition: background-color 400ms ease;
+
+  animation: fadeInOpacity 3s;
+
+  background-color: transparent;
+
+  top: 0;
+  /* right: 0; */
+
+  font-weight: 400;
+
+  margin-right: 2rem;
+  margin-top: 2rem;
+
+  position: absolute;
+}
+
+.switch {
+  align-items: center;
+  /* border: 0.2rem solid; */
+  padding: 0 20px;
+  border-radius: 45px;
+  display: flex;
+  height: 2rem;
+  justify-content: center;
+  position: relative;
+  /* width: 3rem; */
+}
+
+.darkswitch.dark > .switch {
+  border-color: white;
+}
+
+.darkswitch.light > .switch {
+  border-color: #282828;
+}
+
+.switch > .switch__label {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0 10px;
+  transition: color 200ms ease-out;
+  /*  width: 2rem; */
+}
+
+.darkswitch.dark > .switch > .switch__label:hover {
+  color: #fca311;
+}
+
+.darkswitch.light > .switch > .switch__label:hover {
+  color: #fca311;
+}
+
+.darkswitch > .switch > .switch__indicator {
+  height: 2rem;
+  left: 0;
+  position: absolute;
+  transition: transform 600ms cubic-bezier(0.02, 0.94, 0.09, 0.97);
+  width: 2rem;
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+  display: none;
+}
+
+input#_0:checked ~ .switch__indicator {
+  background: url(../assets/icons/auto.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate3d(-6px, 0, 0);
+}
+
+input#_1:checked ~ .switch__indicator {
+  background: url(../assets/icons/dark.svg);
+  background-size: contain;
+  transform: translate3d(95px, 0, 0);
+}
+
+input#_2:checked ~ .switch__indicator {
+  background: url(../assets/icons/light.svg);
+  background-size: contain;
+  transform: translate3d(200px, 0, 0);
+}
