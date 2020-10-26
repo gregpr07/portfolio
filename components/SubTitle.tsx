@@ -12,7 +12,7 @@ export default styled.p`
   line-height: 1.15;
 
   font-weight: 300;
-  animation: ${fadeIn} 2s;
+  animation: ${fadeIn} 1s;
   padding-top: 0.5rem;
   text-align: left;
 

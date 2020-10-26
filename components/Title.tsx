@@ -26,7 +26,7 @@ export default styled.h1`
 
   font-weight: 600;
   animation-name: ${fadeIn};
-  animation-duration: 2s;
+  animation-duration: 1s;
   //animation-timing-function: cubic-bezier(0.4, -0.55, 0.1, 1);
   width: 100%;
   font-size: 50px;

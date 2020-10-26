@@ -1,4 +1,6 @@
-import styles from "../styles/Home.module.css";
+//import styles from "../styles/Home.module.css";
+
+import Link from "next/link";
 
 import Container from "../components/Container";
 import Header from "../components/Header";
@@ -8,19 +10,20 @@ import BottomText from "../components/BottomText";
 import Maxer from "../components/Maxer";
 import DarkModeSwitch from "../components/DarkModeSwitch";
 
-export default function Home() {
+export default function Index() {
   return (
     <Container>
       <Header>
         <Maxer>
           <DarkModeSwitch />
-          <Title>Hey, I am Gregor Žunič</Title>
+          <Title>Hi, I am Gregor Žunič</Title>
           <SubTitle>
             Fullstack developer, Machine Learning reseacher and Physics student
           </SubTitle>
         </Maxer>
         <BottomText>
-          Read <a>about me</a> or <a>contact me</a>
+          Read <Link href="/about">about me</Link> or{" "}
+          <Link href="/contact">contact me</Link>
         </BottomText>
       </Header>
       <Maxer>
