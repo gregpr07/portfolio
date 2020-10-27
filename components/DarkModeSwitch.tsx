@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { useDarkMode } from "next-dark-mode";
 import { device } from "../functions/device";
 
@@ -13,36 +13,48 @@ export default function DarkSwitch() {
     switchToLightMode,
   } = useDarkMode();
 
-  const findActive = (text: string): boolean => {
-    if (autoModeActive) return text === "auto";
-    else if (darkModeActive) return text === "dark";
-    else return text === "light";
+  const findActive = () => {
+    if (autoModeActive) return 0;
+    else if (darkModeActive) return 1;
+    else return 2;
   };
 
-  const toggleMode = (text: string) => {
-    if (text === "Auto") switchToAutoMode();
-    if (text === "Dark") switchToDarkMode();
-    if (text === "Light") switchToLightMode();
+  const options = ["Auto", "Dark", "Light"];
+  const [current, setCurrent] = useState(findActive());
+
+  const setNewCurr = () => {
+    console.log(current);
+    if (current > 1) {
+      setCurrent(0);
+    } else {
+      setCurrent(current + 1);
+    }
+  };
+
+  const toggleMode = () => {
+    if (current == 0) switchToDarkMode();
+    if (current == 1) switchToLightMode();
+    if (current == 2) switchToAutoMode();
+    setNewCurr();
   };
 
   return (
     <div className={`darkswitch ${darkModeActive ? "dark" : "light"}`}>
-      <div className="switch">
-        {["Auto", "Dark", "Light"].map((text, index) => (
-          <Fragment key={index}>
-            <input
-              checked={findActive(text.toLowerCase())}
-              id={`_${index}`}
-              name="switch"
-              onChange={() => toggleMode(text)}
-              type="radio"
-            />
-            <label className="switch__label" htmlFor={`_${index}`}>
-              {text}
-            </label>
-          </Fragment>
-        ))}
-        <div className="switch__indicator" />
+      <div
+        className="switch"
+        onClick={() => {
+          toggleMode();
+        }}
+      >
+        <Fragment>
+          <input checked={true} id={`_${current}`} name="switch" type="radio" />
+          <label className="switch__label" htmlFor={`_${current}`}>
+            {options[current]}
+          </label>
+        </Fragment>
+        <div
+          className={`switch__indicator ${darkModeActive ? "right" : "left"}`}
+        />
       </div>
     </div>
   );
