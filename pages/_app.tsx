@@ -17,7 +17,20 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={darkModeActive ? darkTheme : lightTheme}>
       <Head>
-        <title>Gregor Žunič</title>
+        <title>Gregor's portfolio</title>
+        <meta
+          name="description"
+          content="Gregor Žunič's portfolio website focused on programming and resarch"
+        />
+        <meta
+          name="keywords"
+          content="Programmer, Full Stack, Physics, Machine Learning"
+        />
+        <meta name="author" content="Gregor Žunič" />
+        <meta
+          name="google-site-verification"
+          content="wI61WY7qM1-YSqsA-9Iab0R7-xcEw1qNm9tMvAowyZ4"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

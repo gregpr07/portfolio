@@ -2265,6 +2265,11 @@ data-uri-to-buffer@3.0.0:
   dependencies:
     buffer-from "^1.1.1"
 
+date-fns@^2.9.0:
+  version "2.16.1"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.16.1.tgz#05775792c3f3331da812af253e1a935851d3834b"
+  integrity sha512-sAJVKx/FqrLYHAQeN7VpJrPhagZc9R4ImZIWYRFZaaohR3KzmuK88touwsSwSVT8Qcbd4zoDsnGfX4GFB4imyQ==
+
 debug@4, debug@^4.1.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.2.0.tgz#7f150f93920e94c58f5574c2fd01a3110effe7f1"
@@ -3658,6 +3663,13 @@ next@9.5.5:
     web-vitals "0.2.4"
     webpack "4.44.1"
     webpack-sources "1.4.3"
+
+nextjs-sitemap-generator@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/nextjs-sitemap-generator/-/nextjs-sitemap-generator-1.1.0.tgz#838863cd42bdab0ff1f88a1c19e3b44c03d6001e"
+  integrity sha512-l3/MGvgfJIoY+ZEDU3jLRueh0YWIgtH59LDKX4Ky69JjJvlgizA1U2g5HRhnmWan6HFgOIGtsvGTL2rs4fB2IA==
+  dependencies:
+    date-fns "^2.9.0"
 
 node-fetch@2.6.0:
   version "2.6.0"
