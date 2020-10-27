@@ -10,7 +10,7 @@ export default styled.div`
 
   /* padding-bottom: 2.5vh; */
   @media ${device.tablet} {
-    padding-bottom: 15vh;
+    padding-bottom: 10vh;
   }
 
   flex: 1;
