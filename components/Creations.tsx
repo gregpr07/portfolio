@@ -88,7 +88,7 @@ const Card = styled.div`
   color: ${({ theme }) => theme.colors.textColor};
 
   border-radius: 10px;
-  box-shadow: -1rem 1rem 3rem #000;
+  box-shadow: ${({ theme }) => theme.colors.textColor};
   /*   margin-left: -50px; */
   transition: 0.4s ease-out;
 
@@ -96,16 +96,22 @@ const Card = styled.div`
     display: none;
     background: ${({ theme }) => theme.colors.cardBackground};
     border-radius: 0 14px 14px 0;
+    transition: 0.4s ease-out;
+    transform: translateX(-75);
   }
 
   &:hover {
     transform: scale(1.25) translateX(-25px);
 
     transition: 0.4s ease-out;
+    z-index: 100;
     /* margin-right: 3rem; */
 
     p {
       display: inline;
+      transition: 0.4s ease-out;
+      z-index: 99;
+      transform: translateX(0);
     }
 
     img {
@@ -119,7 +125,7 @@ const Grid = styled.div`
   grid-template-columns: repeat(2, minmax(0, 1fr));
   /* grid-template-columns: auto auto auto; */
   padding-top: 20px;
-  grid-gap: 20px;
+  grid-gap: 3rem;
 `;
 
 export default function Creations() {
