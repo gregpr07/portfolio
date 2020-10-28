@@ -17,10 +17,10 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={darkModeActive ? darkTheme : lightTheme}>
       <Head>
-        <title>Gregor's portfolio</title>
+        <title>Gregor Žunič</title>
         <meta
           name="description"
-          content="Gregor Žunič's portfolio website focused on programming and resarch"
+          content="My developer portfolio with focus on programming and research"
         />
         <meta
           name="keywords"
