@@ -11,12 +11,14 @@ const IMG = styled.img`
     width: 34px;
     height: 34px;
   }
-  @media ${device.tablet} {
+  /*   @media ${device.tablet} {
     width: 28px;
     height: 28px;
-  }
+  } */
 
   display: inline;
+
+  object-fit: contain;
 
   vertical-align: middle;
 
