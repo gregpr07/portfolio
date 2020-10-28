@@ -24,7 +24,6 @@
 
   font-weight: 600;
 
-  margin-right: 2rem;
   margin-top: 2rem;
 
   position: absolute;
@@ -64,11 +63,11 @@
 }
 
 .darkswitch.dark > .switch > .switch__label:hover {
-  color: #fca311;
+  color: #eca400;
 }
 
 .darkswitch.light > .switch > .switch__label:hover {
-  color: #fca311;
+  color: #eca400;
 }
 
 .darkswitch > .switch > .switch__indicator {

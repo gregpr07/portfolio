@@ -46,12 +46,17 @@ export default function DarkSwitch() {
           toggleMode();
         }}
       >
-        <Fragment>
-          <input checked={true} id={`_${current}`} name="switch" type="radio" />
-          <label className="switch__label" htmlFor={`_${current}`}>
-            {options[current]}
-          </label>
-        </Fragment>
+        <input
+          checked={true}
+          id={`_${current}`}
+          name="switch"
+          type="radio"
+          readOnly
+        />
+        <label className="switch__label" htmlFor={`_${current}`}>
+          {options[current]}
+        </label>
+
         <div
           className={`switch__indicator ${darkModeActive ? "right" : "left"}`}
         />

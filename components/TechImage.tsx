@@ -30,7 +30,7 @@ export default function Image({ name, dark = false }) {
   const { darkModeActive } = useDarkMode();
   return (
     <IMG
-      src={"/images/" + (darkModeActive && dark ? "dark_" : "") + name}
+      src={"/images/logos/" + (darkModeActive && dark ? "dark_" : "") + name}
       alt={name}
     />
   );

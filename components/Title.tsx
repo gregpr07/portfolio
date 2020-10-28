@@ -31,9 +31,12 @@ export default styled.h1`
   width: 100%;
   font-size: 50px;
   @media ${device.laptop} {
-    font-size: 40px;
+    font-size: 44px;
   }
   @media ${device.tablet} {
+    font-size: 34px;
+  }
+  @media ${device.mobileL} {
     font-size: 30px;
   }
 `;
