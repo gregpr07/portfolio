@@ -18,9 +18,12 @@ export default styled.p`
 
   font-size: 34px;
   @media ${device.laptop} {
-    font-size: 28px;
+    font-size: 30px;
   }
   @media ${device.tablet} {
+    font-size: 26px;
+  }
+  @media ${device.mobileL} {
     font-size: 22px;
   }
 `;

@@ -1,9 +1,9 @@
 export default {
   colors: {
     background: "#0c1529",
-    cardBackground: "#E5E9F0",
-    buttonBackground: "#fca311",
+    cardBackground: "#14325C",
+    buttonBackground: "#ECA400",
     textColor: "#ffffff",
-    buttonColor: "#fca311",
+    buttonColor: "#ECA400",
   },
 };
