@@ -92,6 +92,7 @@ const Card = styled.div`
 
   @media ${device.mobileM} {
     width: 90%;
+    min-width: 350px;
   }
 
   position: relative;
