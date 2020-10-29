@@ -92,7 +92,12 @@ const Card = styled.div`
 
   @media ${device.mobileM} {
     width: 90%;
-    min-width: 350px;
+    min-width: 300px;
+  }
+
+  @media ${device.mobileS} {
+    width: 90%;
+    min-width: 275px;
   }
 
   position: relative;
@@ -165,7 +170,7 @@ const H2 = styled.h2`
     font-size: 20px;
   }
 
-  text-decoration: none;
+  text-decoration: none !important;
   font-style: normal;
 `;
 

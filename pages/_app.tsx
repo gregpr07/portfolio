@@ -20,11 +20,11 @@ function MyApp({ Component, pageProps }) {
         <title>Gregor Žunič</title>
         <meta
           name="description"
-          content="My developer portfolio with focus on programming and research"
+          content="I am a Physics student, fullstack programmer and Machine Learning researcher, currently researching at IJS (Institute Jozef Stefan) in Ljubljana"
         />
         <meta
           name="keywords"
-          content="Programmer, Full Stack, Physics, Machine Learning"
+          content="Programmer, Full Stack, Physics, Machine Learning, Institute Jozef Stefan, IJS, Ljubljana"
         />
         <meta name="author" content="Gregor Žunič" />
         <meta
