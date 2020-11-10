@@ -92,21 +92,21 @@ input#_0:checked ~ .switch__indicator {
 }
 
 input#_0:checked ~ .switch__indicator.left {
-  transform: translate3d(-5px, 0px, 0);
+  /* transform: translate3d(-5px, 0px, 0); */
 }
 
 input#_0:checked ~ .switch__indicator.right {
-  transform: translate3d(76px, 0px, 0);
+  /* transform: translate3d(76px, 0px, 0); */
 }
 
 input#_1:checked ~ .switch__indicator {
   background: url(../assets/icons/dark.svg);
   background-size: contain;
-  transform: translate3d(76px, 0, 0);
+  /* transform: translate3d(76px, 0, 0); */
 }
 
 input#_2:checked ~ .switch__indicator {
   background: url(../assets/icons/light.svg);
   background-size: contain;
-  transform: translate3d(-5px, 0, 0);
+  /*  transform: translate3d(-5px, 0, 0); */
 }

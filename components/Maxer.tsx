@@ -5,10 +5,10 @@ export default styled.div`
   max-width: 1000px;
 
   @media ${device.laptopL} {
-    max-width: 800px;
+    max-width: 850px;
   }
 
   @media ${device.tablet} {
-    max-width: 700px;
+    max-width: 750px;
   }
 `;

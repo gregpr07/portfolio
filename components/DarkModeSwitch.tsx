@@ -53,9 +53,9 @@ export default function DarkSwitch() {
           type="radio"
           readOnly
         />
-        <label className="switch__label" htmlFor={`_${current}`}>
+        {/*         <label className="switch__label" htmlFor={`_${current}`}>
           {options[current]}
-        </label>
+        </label> */}
 
         <div
           className={`switch__indicator ${darkModeActive ? "right" : "left"}`}

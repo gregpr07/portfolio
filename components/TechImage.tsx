@@ -2,14 +2,18 @@ import styled from "styled-components";
 import { device } from "../functions/device";
 import { useDarkMode } from "next-dark-mode";
 
+interface bigImg {
+  big: number;
+}
+
 const IMG = styled.img`
   border-radius: 8px;
 
   width: 45px;
   height: 45px;
   @media ${device.laptop} {
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
   }
   /*   @media ${device.tablet} {
     width: 28px;
@@ -28,7 +32,7 @@ const IMG = styled.img`
   margin-right: 8px;
 `;
 
-export default function Image({ name, dark = false }) {
+export default function Image({ name, dark = false, big = false }) {
   const { darkModeActive } = useDarkMode();
   return (
     <IMG
