@@ -7,7 +7,6 @@ import TechImage from "./TechImage";
 import Maxer from "./Maxer";
 import SubTitle from "./SubTitle";
 import Link from "next/link";
-import { abort } from "process";
 
 const data = [
   {
