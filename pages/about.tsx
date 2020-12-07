@@ -30,13 +30,12 @@ export default function About() {
       <Maxer>
         <Title>About me</Title>
         <Text>
-          I amworking on web crawlers, data analysis, data presentation and
-          created the backend and frontend of many websites a mobile
-          application.
-          <br />I also work in research in machine learning field, more
-          specifically on text mining and multi- level classification.
+          I am working on web crawlers, data analysis, data presentation,
+          backend and frontend of websites and mobile applications.
+          <br />I also work in research in machine learning field, currently on
+          text mining and multi-level classification.
         </Text>
-        <SubTitle style={{ marginBottom: 15 }}>
+        <SubTitle style={{ marginBottom: 15, marginTop: 10 }}>
           The technologies I work with
         </SubTitle>
         {content.technologies.map((tech) => (

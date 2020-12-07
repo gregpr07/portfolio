@@ -117,7 +117,7 @@ const Card = styled.div`
   &:hover {
     /* transform: scale(1.01); */
 
-    opacity: 0.9;
+    opacity: 0.85;
 
     transition: 0.4s ease-out;
 

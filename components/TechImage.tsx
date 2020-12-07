@@ -39,7 +39,16 @@ export default function Image({ name, dark = false, big = false }) {
       src={"/images/logos/" + (darkModeActive && dark ? "dark_" : "") + name}
       alt={name}
       style={
-        big ? { width: "8vw", height: 50, minWidth: 50, maxWidth: 70 } : null
+        big
+          ? {
+              width: "8vw",
+              height: 60,
+              minWidth: 50,
+              maxWidth: 70,
+              marginRight: 5,
+              marginBottom: 10,
+            }
+          : null
       }
     />
   );
