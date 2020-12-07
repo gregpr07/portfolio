@@ -38,6 +38,9 @@ export default function Image({ name, dark = false, big = false }) {
     <IMG
       src={"/images/logos/" + (darkModeActive && dark ? "dark_" : "") + name}
       alt={name}
+      style={
+        big ? { width: "8vw", height: 50, minWidth: 50, maxWidth: 70 } : null
+      }
     />
   );
 }

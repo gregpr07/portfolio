@@ -1,4 +1,5 @@
 export default {
+  dark: false,
   colors: {
     background: "#ffffff",
     cardBackground: "#ffffff",

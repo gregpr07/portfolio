@@ -104,19 +104,28 @@ const Card = styled.div`
   border-radius: 20px;
   color: ${({ theme }) => theme.colors.textColor};
 
-  background-color: white;
+  background-color: #ffffff;
+  opacity: 0.8;
 
   box-shadow: ${({ theme }) =>
     theme.colors.textColor === "#2E3440"
       ? "0 2px 20px 5px " + theme.colors.textColor + "25"
-      : null};
+      : "0 2px 10px 3px " + theme.colors.textColor + "15"};
   /*   margin-left: -50px; */
   transition: 0.4s ease-out;
 
   &:hover {
     /* transform: scale(1.01); */
 
+    opacity: 0.9;
+
     transition: 0.4s ease-out;
+
+    box-shadow: ${({ theme }) =>
+      theme.colors.textColor === "#2E3440"
+        ? "0 2px 20px 5px " + theme.colors.textColor + "35"
+        : null};
+
     /* margin-right: 3rem; */
   }
 `;
@@ -130,8 +139,11 @@ const ImgBx = styled.div`
   transition: 1.5s ease-out;
   z-index: 1;
 
+  filter: grayscale(20%);
+
   ${Card}:hover & {
     transform: scale(1.05);
+    filter: grayscale(0);
   }
 `;
 
@@ -169,7 +181,7 @@ const H2 = styled.h2`
     font-size: 20px;
   }
 
-  text-decoration: none !important;
+  text-decoration: none;
   font-style: normal;
 `;
 
@@ -195,7 +207,7 @@ export default function Creations() {
         </ImgBx>
       </a>
       <Details>
-        <a href={creation.link}>
+        <a href={creation.link} style={{ textDecoration: "none" }}>
           <H2>{creation.title}</H2>
         </a>
         <H3>{creation.description}</H3>
@@ -208,7 +220,7 @@ export default function Creations() {
           }}
         >
           {creation.technologies.map((tech) => (
-            <TechImage name={tech} big={true} />
+            <TechImage name={tech} />
           ))}
         </div>
       </Details>

@@ -3,26 +3,30 @@ import { device } from "../functions/device";
 
 const fadeIn = keyframes`
     0% { opacity:0; }
-   /*  50% { opacity:0; } */
+    /* 45% { opacity:0; } */
     100% { opacity:1; }
 `;
 
 export default styled.p`
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 2rem;
-  line-height: 1.15;
-  font-weight: 300;
+  margin: 0;
+  line-height: 26px;
 
+  font-weight: 300;
   animation: ${fadeIn} 1s;
   padding-top: 0.5rem;
-  text-align: center;
+  padding-bottom: 0.5rem;
+  text-align: left;
+
+  max-width: 700px;
 
   font-size: 24px;
   @media ${device.laptop} {
     font-size: 20px;
   }
   @media ${device.tablet} {
-    font-size: 18px;
+    font-size: 20px;
+  }
+  @media ${device.mobileL} {
+    font-size: 20px;
   }
 `;
