@@ -1,6 +1,7 @@
 export default {
+  dark: true,
   colors: {
-    background: "#0c1529",
+    background: "#14213d",
     cardBackground: "#14325C",
     buttonBackground: "#ECA400",
     textColor: "#ffffff",

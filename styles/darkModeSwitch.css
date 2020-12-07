@@ -2,9 +2,9 @@
   0% {
     opacity: 0;
   }
-  50% {
+  /*   50% {
     opacity: 0;
-  }
+  } */
   100% {
     opacity: 1;
   }
@@ -13,9 +13,9 @@
 .darkswitch {
   align-items: center;
 
-  transition: background-color 400ms ease;
+  /* transition: background-color 400ms ease; */
 
-  animation: fadeInOpacity 3s;
+  animation: fadeInOpacity 1s;
 
   background-color: transparent;
 
