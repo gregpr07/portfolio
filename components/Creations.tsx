@@ -14,7 +14,7 @@ const data = [
     description:
       "Legacy Videolectures.net website needed a rebuild so I built a iOS and Android app, which acts as a SPA.",
     link: "http://vln-mobile.ijs.si",
-    image: "vln.jpg",
+    image: "vln.png",
     technologies: [
       "django.svg",
       "elasticsearch.png",
@@ -102,15 +102,16 @@ const Card = styled.div`
   position: relative;
 
   border-radius: 20px;
-  color: ${({ theme }) => theme.colors.textColor};
 
-  background-color: #ffffff;
+  backdrop-filter: ${({ theme }) => (theme.dark ? "blur(30px)" : "blur(3px)")};
+
+  background-color: ${({ theme }) => theme.colors.cardBackground};
   opacity: 0.8;
 
   box-shadow: ${({ theme }) =>
     theme.colors.textColor === "#2E3440"
       ? "0 2px 20px 5px " + theme.colors.textColor + "25"
-      : "0 2px 10px 3px " + theme.colors.textColor + "15"};
+      : "0 2px 10px 3px " + theme.colors.cardBackground + "15"};
   /*   margin-left: -50px; */
   transition: 0.4s ease-out;
 
@@ -139,11 +140,11 @@ const ImgBx = styled.div`
   transition: 1.5s ease-out;
   z-index: 1;
 
-  filter: grayscale(20%);
+  filter: saturate(70%);
 
   ${Card}:hover & {
     transform: scale(1.05);
-    filter: grayscale(0);
+    filter: saturate(100%);
   }
 `;
 
@@ -176,6 +177,7 @@ const H2 = styled.h2`
   color: #2e3440;
 
   font-size: 24px;
+  color: ${({ theme }) => theme.colors.textColor};
 
   @media ${device.tablet} {
     font-size: 20px;
@@ -187,8 +189,9 @@ const H2 = styled.h2`
 
 const H3 = styled.h3`
   font-weight: 300;
+  color: ${({ theme }) => theme.colors.textColor + "85"};
 
-  color: #2e3440;
+  //color: #2e3440;
   display: block;
   margin-top: 0.6rem;
 
