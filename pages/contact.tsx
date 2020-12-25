@@ -10,7 +10,13 @@ export default function Contact() {
     <Header>
       <BackIcon />
       <Maxer>
-        <Title>Contact me</Title>
+        <Title
+          css={`
+            margin-bottom: 10px;
+          `}
+        >
+          Contact me
+        </Title>
 
         <SubTitle>
           <TechImage name="email.svg" dark={true} />{" "}
