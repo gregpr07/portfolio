@@ -10,7 +10,8 @@ export default styled.div`
     ${(props) => props.theme.colors.background};
 
   background-size: 1200px 1200px;
-  background-position: ${() => Math.floor(Math.random() * Math.floor(500))}px ${() => Math.floor(Math.random() * Math.floor(500))}px;
+  background-position: ${() => Math.floor(Math.random() * Math.floor(500))}px
+    ${() => Math.floor(Math.random() * Math.floor(500))}px;
   color: ${(props) => props.theme.colors.textColor};
 
   padding-left: 2em;

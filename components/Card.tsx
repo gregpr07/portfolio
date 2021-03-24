@@ -21,7 +21,7 @@ const Card = styled.div`
 
   position: relative;
 
-  border-radius: 20px;
+  border-radius: 25px;
 
   backdrop-filter: ${({ theme }) => (theme.dark ? "blur(30px)" : "blur(3px)")};
 
@@ -30,9 +30,13 @@ const Card = styled.div`
 
   box-shadow: ${({ theme }) =>
     theme.colors.textColor === "#2E3440"
-      ? "0 2px 20px 5px " + theme.colors.textColor + "25"
+      ? "20px 20px 20px #d3d3d350, -20px -20px 36px #ededed;"
       : "0 2px 10px 3px " + theme.colors.cardBackground + "15"};
   /*   margin-left: -50px; */
+
+  //background: #e0e0e0;
+  box-shadow: 
+
   transition: 0.4s ease-out;
 
   &:hover {
@@ -42,10 +46,10 @@ const Card = styled.div`
 
     transition: 0.4s ease-out;
 
-    box-shadow: ${({ theme }) =>
+    /* box-shadow: ${({ theme }) =>
       theme.colors.textColor === "#2E3440"
         ? "0 2px 20px 5px " + theme.colors.textColor + "35"
-        : null};
+        : null}; */
 
     /* margin-right: 3rem; */
   }
