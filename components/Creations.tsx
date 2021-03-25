@@ -14,7 +14,7 @@ const data = [
     title: "Videolectures.net",
     description:
       "Legacy Videolectures.net website needed a rebuild so I built a iOS and Android app, which acts as a SPA.",
-    link: "http://vln-mobile.ijs.si",
+    link: "https://videolectures.net",
     image: "vln.png",
     technologies: [
       "django.svg",
