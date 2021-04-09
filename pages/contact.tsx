@@ -11,9 +11,9 @@ export default function Contact() {
       <BackIcon />
       <Maxer>
         <Title
-          css={`
-            margin-bottom: 10px;
-          `}
+          style={{
+            marginBottom: "10px",
+          }}
         >
           Contact me
         </Title>
