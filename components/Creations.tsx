@@ -8,55 +8,97 @@ import Maxer from "./Maxer";
 import SubTitle from "./SubTitle";
 import Link from "next/link";
 import Card from "./Card";
+import { shuffle } from "../functions/utils";
 
-const data = [
+/**
+ * ICONS FROM
+ *  https://devicon.dev
+ */
+export const data = [
+  {
+    title: "Strader",
+    position: "Co-founder",
+    description:
+      "A collection of Telegram based tools helping crypto traders make more profit.",
+    link: "https://strader.io",
+    image: "strader.png",
+    technologies: [
+      "nextjs.svg",
+      "tailwindcss.svg",
+      "docker.svg",
+      "golang.svg",
+      "nodejs.svg",
+      "ethereum.svg",
+    ],
+  },
+  {
+    title: "Green Button",
+    position: "Full-Stack Developer",
+    description:
+      "Button up! I have designed the architecture and implemented the mobile app and the website!",
+    link: "https://green-button.io",
+    image: "greenbutton.png",
+    technologies: [
+      "django.svg",
+      "elasticsearch.png",
+      "react.svg",
+      "redux.svg",
+      "postgres.svg",
+      "tailwindcss.svg",
+    ],
+  },
   {
     title: "Videolectures.net",
+    position: "Tech Lead",
     description:
-      "Legacy Videolectures.net website needed a rebuild so I built a iOS and Android app, which acts as a SPA.",
+      "Videolectures.net desperately needed rebuild. I built a mobile app, new backend and new website.",
     link: "https://videolectures.net",
     image: "vln.png",
     technologies: [
       "django.svg",
       "elasticsearch.png",
-      "react.png",
-      "redux.png",
-      "postgres.png",
+      "react.svg",
+      "tailwindcss.svg",
+      "redux.svg",
+      "postgres.svg",
     ],
   },
   {
     title: "X5GON Platform",
+    position: "Full-Stack Developer",
     description:
       "Frontend of X5GON platform, a European funded project which analyzes Open Educational Resources.",
     link: "https://platform.x5gon.org",
     image: "platform.png",
-    technologies: ["react.png", "node.png", "postgres.png"],
+    technologies: ["react.svg", "nodejs.svg", "postgres.svg"],
   },
   {
     title: "X5GON Discovery",
+    position: "Frontend Developer",
     description:
       "A search engine of X5GON project focused on finding OER materials from all over the world.",
     link: "https://discovery.x5gon.org",
     image: "discovery.png",
     technologies: [
       "elasticsearch.png",
-      "react.png",
-      "postgres.png",
-      "node.png",
+      "react.svg",
+      "postgres.svg",
+      "nodejs.svg",
     ],
   },
   {
     title: "X5GON Blind",
+    position: "Frontend Developer",
     description:
       "A helper and recommender engine platform which helps blind students and learns their preferences.",
     link: "http://blind.x5gon.org",
     image: "blind.png",
     technologies: [
-      "tensorflow.png",
+      "tensorflow.svg",
       "scikit.png",
-      "react.png",
+      "react.svg",
       "django.svg",
-      "postgres.png",
+      "postgres.svg",
     ],
   },
 ];
@@ -140,12 +182,23 @@ const H2 = styled.h2`
 `;
 
 const H3 = styled.h3`
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.textColor + "85"};
+
+  //color: #2e3440;
+  display: block;
+  margin-top: 0.4rem;
+
+  font-size: 16px;
+`;
+
+const H4 = styled.h4`
   font-weight: 300;
   color: ${({ theme }) => theme.colors.textColor + "85"};
 
   //color: #2e3440;
   display: block;
-  margin-top: 0.6rem;
+  margin-top: -0.2rem;
 
   font-size: 16px;
 `;
@@ -165,7 +218,8 @@ export default function Creations() {
         <a href={creation.link} style={{ textDecoration: "none" }}>
           <H2>{creation.title}</H2>
         </a>
-        <H3>{creation.description}</H3>
+        <H3>{creation.position}</H3>
+        <H4>{creation.description}</H4>
         <div
           style={{
             position: "absolute",
@@ -174,7 +228,7 @@ export default function Creations() {
             alignContent: "center",
           }}
         >
-          {creation.technologies.map((tech) => (
+          {shuffle(creation.technologies).map((tech) => (
             <TechImage name={tech} />
           ))}
         </div>

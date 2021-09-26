@@ -3,7 +3,7 @@ import { device } from "../functions/device";
 
 const Card = styled.div`
   width: 400px;
-  height: 350px;
+  height: 420px;
 
   @media ${device.tablet} {
     width: 350px;

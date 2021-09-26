@@ -8,19 +8,17 @@ import DarkModeSwitch from "../components/DarkModeSwitch";
 import BackIcon from "../components/BackIcon";
 import TechImage from "../components/TechImage";
 import Text from "../components/Text";
+import { data } from "../components/Creations";
+import { shuffle } from "../functions/utils";
 
-const content = {
-  technologies: [
-    "django.svg",
-    "react.png",
-    "tensorflow.png",
-    "scikit.png",
-    "elasticsearch.png",
-    "redux.png",
-    "node.png",
-    "postgres.png",
-    "iu.png",
-  ],
+const getAllTechs = () => {
+  let items = [];
+  data.forEach((element) =>
+    element.technologies.forEach(
+      (item) => !items.includes(item) && items.push(item)
+    )
+  );
+  return shuffle(items);
 };
 
 export default function About() {
@@ -38,7 +36,7 @@ export default function About() {
         <SubTitle style={{ marginBottom: 15, marginTop: 10 }}>
           The technologies I work with
         </SubTitle>
-        {content.technologies.map((tech) => (
+        {getAllTechs().map((tech) => (
           <TechImage name={tech} big={true} />
         ))}
       </Maxer>
