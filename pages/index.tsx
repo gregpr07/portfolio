@@ -19,7 +19,7 @@ export default function Index() {
         <Maxer>
           <Title>Hi, I am Gregor Žunič &#129304;</Title>
           <SubTitle>
-            Fullstack and blockchain developer, Machine Learning reseacher and
+            Fullstack and Blockchain developer, Machine Learning reseacher and
             Physics student
           </SubTitle>
         </Maxer>
