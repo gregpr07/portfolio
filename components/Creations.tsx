@@ -241,8 +241,8 @@ export default function Creations() {
       <div style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
         <SubTitle>My recent creations</SubTitle>
         <Grid>
-          {data.map((creation) => (
-            <RenderCreation creation={creation} />
+          {data.map((creation, index) => (
+            <RenderCreation creation={creation} key={index} />
           ))}
         </Grid>
       </div>

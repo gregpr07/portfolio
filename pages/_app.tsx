@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import "../styles/darkModeSwitch.css";
+
 import withDarkMode from "next-dark-mode";
 import { ThemeProvider } from "styled-components";
 
@@ -32,6 +33,10 @@ function MyApp({ Component, pageProps }) {
           content="wI61WY7qM1-YSqsA-9Iab0R7-xcEw1qNm9tMvAowyZ4"
         />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+          rel="stylesheet"
+        />
       </Head>
 
       <Container>
