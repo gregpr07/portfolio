@@ -7,10 +7,25 @@ const files = [
     name: "10_0_0.5_10",
     description: "Graf majhnega začetnega kota in majhne frekvence vlečenja.",
   },
-
   {
     name: "50_0_0.5_0.01",
     description: "Graf velike frekvence vlečenja.",
+  },
+  {
+    name: "100_0_0.7_2",
+    description: "Zanimivo ojačanje.",
+  },
+  {
+    name: "55_0_0.7_5",
+    description: "",
+  },
+  {
+    name: "120_0_0.7_5",
+    description: "",
+  },
+  {
+    name: "120_0_0.3_5",
+    description: "",
   },
 ];
 
