@@ -10,6 +10,8 @@ import Link from "next/link";
 import Card from "./Card";
 import { shuffle } from "../functions/utils";
 
+import { Fade } from "react-awesome-reveal";
+
 /**
  * ICONS FROM
  *  https://devicon.dev
@@ -242,7 +244,9 @@ export default function Creations() {
         <SubTitle>My recent creations</SubTitle>
         <Grid>
           {data.map((creation, index) => (
-            <RenderCreation creation={creation} key={index} />
+            <Fade key={index} delay={index * 50}>
+              <RenderCreation creation={creation} />
+            </Fade>
           ))}
         </Grid>
       </div>
