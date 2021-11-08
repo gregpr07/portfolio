@@ -11,17 +11,13 @@ import Creations from "../components/Creations";
 
 import DarkModeSwitch from "../components/DarkModeSwitch";
 
-import { Bounce } from "react-awesome-reveal";
-
 export default function Index() {
   return (
     <>
       <Header>
         <DarkModeSwitch />
         <Maxer>
-          <Title>
-            Hi, I am Gregor Žunič <Bounce triggerOnce>&#129304;</Bounce>
-          </Title>
+          <Title>Hi, I am Gregor Žunič &#129304;</Title>
           <SubTitle>
             Fullstack and Blockchain developer, Machine Learning reseacher and
             Physics student

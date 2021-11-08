@@ -244,8 +244,8 @@ export default function Creations() {
         <SubTitle>My recent creations</SubTitle>
         <Grid>
           {data.map((creation, index) => (
-            <Fade key={index} delay={index * 50}>
-              <RenderCreation creation={creation} />
+            <Fade key={index} delay={index * 50} triggerOnce>
+              <RenderCreation creation={creation} key={index} />
             </Fade>
           ))}
         </Grid>
