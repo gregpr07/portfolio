@@ -18,7 +18,7 @@ const getAllTechs = () => {
       (item) => !items.includes(item) && items.push(item)
     )
   );
-  return shuffle(items);
+  return items;
 };
 
 export default function About() {
@@ -28,12 +28,14 @@ export default function About() {
       <Maxer>
         <Title>About me</Title>
         <Text>
-          I am working on web crawlers, data analysis, data presentation,
-          backend and frontend of websites and mobile applications.
-          <br />I also work in research in machine learning field, currently on
-          text mining and multi-level classification.
+          <p>I studying physics (graduating soon).</p>
+          <p style={{ paddingTop: 5, paddingBottom: 5 }}>
+            I enjoy working on DeFi projects, writing smart contracts as well as
+            frontends and backends of mobile and web apps.
+          </p>
+          <p>I have a passion for machine learning and data analysis.</p>
         </Text>
-        <SubTitle style={{ marginBottom: 15, marginTop: 10 }}>
+        <SubTitle style={{ marginBottom: 15, marginTop: 30 }}>
           The technologies I work with
         </SubTitle>
         {getAllTechs().map((tech) => (

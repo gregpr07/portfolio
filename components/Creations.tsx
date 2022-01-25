@@ -18,6 +18,15 @@ import { Fade } from "react-awesome-reveal";
  */
 export const data = [
   {
+    title: "Idoru",
+    position: "Crypto lead",
+    description:
+      "Crypto investment platform with access to the most exclusive private companies.",
+    link: "https://idoru.capital",
+    image: "idoru.png",
+    technologies: ["solidity.svg", "typescript.svg"],
+  },
+  {
     title: "Strader",
     position: "Co-founder",
     description:
@@ -25,12 +34,11 @@ export const data = [
     link: "https://strader.io",
     image: "strader.png",
     technologies: [
-      "nextjs.svg",
-      "tailwindcss.svg",
-      "docker.svg",
-      "golang.svg",
-      "nodejs.svg",
       "ethereum.svg",
+      "nextjs.svg",
+      "typescript.svg",
+      "react.svg",
+      "golang.svg",
     ],
   },
   {
@@ -72,7 +80,7 @@ export const data = [
       "Frontend of X5GON platform, a European funded project which analyzes Open Educational Resources.",
     link: "https://platform.x5gon.org",
     image: "platform.png",
-    technologies: ["react.svg", "nodejs.svg", "postgres.svg"],
+    technologies: ["react.svg", "typescript.svg", "postgres.svg"],
   },
   {
     title: "X5GON Discovery",
@@ -85,7 +93,7 @@ export const data = [
       "elasticsearch.png",
       "react.svg",
       "postgres.svg",
-      "nodejs.svg",
+      "typescript.svg",
     ],
   },
   {
@@ -133,14 +141,16 @@ const ImgBx = styled.div`
   left: 10px;
   bottom: 50%;
   right: 10px;
-  transition: 1.5s ease-out;
+  transition: 2.5s ease-out;
   z-index: 1;
 
-  filter: saturate(70%);
+  filter: saturate(75%);
+
+  transform: scale(0.8);
 
   ${Card}:hover & {
-    transform: scale(1.05);
-    filter: saturate(100%);
+    transform: scale(0.85);
+    /* filter: saturate(100%); */
   }
 `;
 
@@ -150,7 +160,7 @@ const Grid = styled.div`
   margin-top: 3rem;
   grid-gap: 3rem;
 
-  @media ${device.laptop} {
+  @media (max-width: 850px) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 `;
@@ -200,7 +210,7 @@ const H4 = styled.h4`
 
   //color: #2e3440;
   display: block;
-  margin-top: -0.2rem;
+  margin-top: 0.1rem;
 
   font-size: 16px;
 `;
@@ -230,7 +240,7 @@ export default function Creations() {
             alignContent: "center",
           }}
         >
-          {shuffle(creation.technologies).map((tech) => (
+          {creation.technologies.map((tech) => (
             <TechImage name={tech} />
           ))}
         </div>
@@ -241,7 +251,7 @@ export default function Creations() {
   return (
     <Maxer>
       <div style={{ paddingTop: "4rem", paddingBottom: "4rem" }}>
-        <SubTitle>My recent creations</SubTitle>
+        <SubTitle>My work</SubTitle>
         <Grid>
           {data.map((creation, index) => (
             <Fade key={index} delay={index * 50} triggerOnce>
