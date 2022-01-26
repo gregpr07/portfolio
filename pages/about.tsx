@@ -28,7 +28,7 @@ export default function About() {
       <Maxer>
         <Title>About me</Title>
         <Text>
-          <p>I studying physics (graduating soon).</p>
+          <p>I study physics (graduating June 22').</p>
           <p style={{ paddingTop: 5, paddingBottom: 5 }}>
             I enjoy working on DeFi projects, writing smart contracts as well as
             frontends and backends of mobile and web apps.
