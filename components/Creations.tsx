@@ -34,12 +34,21 @@ export const data = [
     link: "https://strader.io",
     image: "strader.png",
     technologies: [
-      "ethereum.svg",
+      "solidity.svg",
       "nextjs.svg",
       "typescript.svg",
       "react.svg",
       "golang.svg",
     ],
+  },
+  {
+    title: "Petka",
+    position: "Co-creator",
+    description:
+      "Guess the 5 letter word in 6 tries. Petka has thousands of active daily users.",
+    link: "http://igrapetka.si",
+    image: "petka.png",
+    technologies: ["nextjs.svg", "typescript.svg", "react.svg"],
   },
   {
     title: "Green Button",
@@ -146,10 +155,10 @@ const ImgBx = styled.div`
 
   filter: saturate(75%);
 
-  transform: scale(0.8);
+  transform: scale(0.9);
 
   ${Card}:hover & {
-    transform: scale(0.85);
+    transform: scale(0.95);
     /* filter: saturate(100%); */
   }
 `;
