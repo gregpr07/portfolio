@@ -1,13 +1,11 @@
-//import styles from "../styles/Home.module.css";
-
 import Link from "next/link";
 
-import Header from "../components/Header";
-import Title from "../components/Title";
-import SubTitle from "../components/SubTitle";
 import BottomText from "../components/BottomText";
-import Maxer from "../components/Maxer";
 import Creations from "../components/Creations";
+import Header from "../components/Header";
+import Maxer from "../components/Maxer";
+import SubTitle from "../components/SubTitle";
+import Title from "../components/Title";
 
 import DarkModeSwitch from "../components/DarkModeSwitch";
 
@@ -19,8 +17,8 @@ export default function Index() {
         <Maxer>
           <Title>Hi, I am Gregor Žunič &#129304;</Title>
           <SubTitle>
-            Fullstack and Blockchain developer, Machine Learning reseacher and
-            Physics student
+            Fullstack developer, Data Scientist, Physicist, and Machine Learning
+            reseacher. I make startups.
           </SubTitle>
         </Maxer>
         <BottomText>

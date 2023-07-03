@@ -1,14 +1,9 @@
 import styled from "styled-components";
 import { device } from "../functions/device";
-import { useDarkMode } from "next-dark-mode";
 
-import TechImage from "./TechImage";
-
+import Card from "./Card";
 import Maxer from "./Maxer";
 import SubTitle from "./SubTitle";
-import Link from "next/link";
-import Card from "./Card";
-import { shuffle } from "../functions/utils";
 
 import { Fade } from "react-awesome-reveal";
 
@@ -17,6 +12,22 @@ import { Fade } from "react-awesome-reveal";
  *  https://devicon.dev
  */
 export const data = [
+  {
+    title: "Real Fake Photos",
+    position: "Co-founder",
+    description:
+      "Turning your selfies into professional headshots with generative Artificial Intelligence.",
+    link: "https://flare.network",
+    image: "realfake.png",
+  },
+  {
+    title: "Flare Network",
+    position: "Senior Fullstack Developer",
+    description:
+      "Blockchain for data, providing secure decentralised access to data from other chains.",
+    link: "https://flare.network",
+    image: "flare.png",
+  },
   {
     title: "Idoru",
     position: "Crypto lead",
@@ -219,9 +230,9 @@ const H4 = styled.h4`
 
   //color: #2e3440;
   display: block;
-  margin-top: 0.1rem;
+  margin-top: 0.8rem;
 
-  font-size: 16px;
+  font-size: 15px;
 `;
 
 export default function Creations() {
@@ -241,18 +252,6 @@ export default function Creations() {
         </a>
         <H3>{creation.position}</H3>
         <H4>{creation.description}</H4>
-        <div
-          style={{
-            position: "absolute",
-            bottom: 0,
-            width: "100%",
-            alignContent: "center",
-          }}
-        >
-          {creation.technologies.map((tech) => (
-            <TechImage name={tech} />
-          ))}
-        </div>
       </Details>
     </Card>
   );
@@ -269,9 +268,6 @@ export default function Creations() {
           ))}
         </Grid>
       </div>
-      {/*   <div style={{ paddingTop: "2rem" }}>
-        <SubTitle>My research</SubTitle>
-      </div> */}
     </Maxer>
   );
 }

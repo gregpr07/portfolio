@@ -1,9 +1,9 @@
-import Header from "../components/Header";
-import Title from "../components/Title";
-import SubTitle from "../components/SubTitle";
-import Maxer from "../components/Maxer";
 import BackIcon from "../components/BackIcon";
+import Header from "../components/Header";
+import Maxer from "../components/Maxer";
+import SubTitle from "../components/SubTitle";
 import TechImage from "../components/TechImage";
+import Title from "../components/Title";
 
 export default function Contact() {
   return (
@@ -20,7 +20,7 @@ export default function Contact() {
 
         <SubTitle>
           <TechImage name="email.svg" dark={true} />{" "}
-          <a href="mailto: gregor.zunic@ijs.si">gregor.zunic@ijs.si</a>
+          <a href="mailto: gregor@profaile.com">gregor@profaile.com</a>
         </SubTitle>
         <SubTitle>
           <TechImage name="linkedin.svg" /> @
