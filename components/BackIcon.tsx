@@ -1,3 +1,5 @@
+"use client";
+
 import styled, { keyframes } from "styled-components";
 import { device } from "../functions/device";
 import Link from "next/link";
@@ -61,11 +63,9 @@ const P = styled.p`
 export default function BackIcon() {
   return (
     <Link href="/">
-      <a>
-        <P>
-          <Icon />
-        </P>
-      </a>
+      <P>
+        <Icon />
+      </P>
     </Link>
   );
 }

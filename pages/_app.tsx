@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
         <title>Gregor Žunič</title>
         <meta
           name="description"
-          content="I study Data Science Masters at ETH. Working as fullstack developer, and Machine Learning researcher, currently creating my own startup in the field of Machine Learning."
+          content="I study Data Science Masters at ETH. Founder working as a fullstack developer, and Machine Learning researcher, currently creating my own startup in the field of Machine Learning."
         />
         <meta
           name="keywords"

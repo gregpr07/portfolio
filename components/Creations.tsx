@@ -4,8 +4,7 @@ import { device } from "../functions/device";
 import Card from "./Card";
 import Maxer from "./Maxer";
 import SubTitle from "./SubTitle";
-
-import { Fade } from "react-awesome-reveal";
+import { motion } from "framer-motion";
 
 /**
  * ICONS FROM
@@ -13,11 +12,25 @@ import { Fade } from "react-awesome-reveal";
  */
 export const data = [
   {
+    title: "Profaile GmbH",
+    position: "Founder and CTO",
+    description: "AI solutions to empower businesses & inspire individuals.",
+    link: "https://www.profaile.com",
+    image: "profaile.png",
+  },
+  {
+    title: "Spexia",
+    position: "Co-founder",
+    description: "The Easiest Way to Boost Your Organic Traffic.",
+    link: "https://www.spexia.ai",
+    image: "spexia.png",
+  },
+  {
     title: "Real Fake Photos",
     position: "Co-founder",
     description:
       "Turning your selfies into professional headshots with generative Artificial Intelligence.",
-    link: "https://flare.network",
+    link: "https://realfakephotos.com",
     image: "realfake.png",
   },
   {
@@ -262,9 +275,16 @@ export default function Creations() {
         <SubTitle>My work</SubTitle>
         <Grid>
           {data.map((creation, index) => (
-            <Fade key={index} triggerOnce>
+            <motion.div
+              key={index}
+              // fade in and animate up (only once, when it apears on the screen)
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }} // Animate when the element comes into view
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }} // Ensure animation runs only once
+            >
               <RenderCreation creation={creation} key={index} />
-            </Fade>
+            </motion.div>
           ))}
         </Grid>
       </div>
